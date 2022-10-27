@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Zeng Qingcheng's homepage(曾庆铖）"
+title                    : "Zeng Qingcheng's homepage"
 title_separator          : "-"
 name                     : &name "Zeng Qingcheng(曾庆铖)"
-description              : &description "Time to get some curiosity!"
+description              : &description ".."
 url                      : https://NeoZng.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/NeoZng.github.io"
@@ -82,8 +82,10 @@ analytics:
 author:
   name             : "Zeng Qingcheng(曾庆铖)"
   avatar           : "profile.jpg"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "room202, Building C1, Taozihu Cultural and Creative Industrial Park, Yuelu District, Changsha, Hunan Province"
+  bio              : "Time to get some curiosity!"
+  location         : "room202, Building C1, 
+                      School of Robotics,Yuelu District, 
+                      Changsha, Hunan Province"
   employer         :
   pubmed           : 
   googlescholar    : 
