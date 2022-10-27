@@ -83,9 +83,7 @@ author:
   name             : "Zeng Qingcheng(曾庆铖)"
   avatar           : "profile.jpg"
   bio              : "Time to get some curiosity!"
-  location         : "room202, Building C1, 
-                      School of Robotics,Yuelu District, 
-                      Changsha, Hunan Province"
+  location         : "https://www.bing.com/maps?osid=95f62360-662b-43d8-b53c-158dcfbc1729&cp=npx8bttdbw3b&lvl=16&v=2&sV=2&form=S00027"
   employer         :
   pubmed           : 
   googlescholar    : 
@@ -117,6 +115,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+  zhihu            : "https://www.zhihu.com/people/zengen-38"
 
 
 # Reading Files

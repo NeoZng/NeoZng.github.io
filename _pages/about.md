@@ -8,15 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-## Basic Info
 I come from Longyan, Fujian. I am currently a undergraduate at Hunan University and I major in ***Automaion***, minor in ***Robotics***. 
 
-Now I am the captain of our university's RoboMaster Robotics competition team. I am interested in computer vision, machine learning, control theory and computer science. I am a skilled user of asm/C/C++/Python/Shell, embedded development is also with my means. 
+Now I am the captain of our university's RoboMaster Robotics competition team. I am a self-proclaimed half-stack engineer in robotics. I am interested in computer vision, machine learning, control theory and computer science. I am a skilled user of asm/C/C++/Python/Shell, embedded development is also with my means. 
 
-***Important***: I'm looking for a Ph.D. \& M.Phil. position in robotics. Please contact me know if you are interested in my background and experience so long as you have a available position!
+***Important:*** I'm looking for a Ph.D. \& M.Phil. position in robotics. Please contact me know if you are interested in my background and experience so long as you have a available position!
 
 
-## details about my interets
+### details about my interets
 1. AI
    - computer vision: object detection, multi-modalities, key-point detection, feature matching
    - network prunning: 
@@ -35,8 +34,3 @@ quantification, knowledge distillation
 ---
 
 If your interest matches mine, feel free to have a conversation with me!
-
-Here's my social media:
-
-- Zhihu: NeoAndrew
-- qq:1586114053(indicate your purpose plz)
