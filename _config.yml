@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Zeng Qingcheng's homepage"
+title                    : "Neo's homepage"
 title_separator          : "-"
 name                     : &name "Zeng Qingcheng(曾庆铖)"
 description              : &description ".."
@@ -83,7 +83,7 @@ author:
   name             : "Zeng Qingcheng(曾庆铖)"
   avatar           : "profile.jpg"
   bio              : "Time to get some curiosity!"
-  location         : "https://www.bing.com/maps?osid=95f62360-662b-43d8-b53c-158dcfbc1729&cp=npx8bttdbw3b&lvl=16&v=2&sV=2&form=S00027"
+  location         : "Yuelu dist,ChangSha"
   employer         :
   pubmed           : 
   googlescholar    : 

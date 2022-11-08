@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Changsha, Hunan University, 2023.6
+* BEng. of Automation in Changsha, Hunan University, 2023.6
 
 Experience
 ======
