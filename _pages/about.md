@@ -8,11 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-I come from Longyan, Fujian. I am currently a undergraduate at Hunan University and I major in ***Automaion***, minor in ***Robotics***. 
+I come from Longyan, Fujian. I am currently an undergraduate at Hunan University and I major in ***Automaion***, minor in ***Robotics***. 
 
 Now I am the captain of our university's RoboMaster Robotics competition team. I am a self-proclaimed half-stack engineer in robotics. I am interested in computer vision, machine learning, control theory and computer science. I am a skilled user of asm/C/C++/Python/Shell, embedded development is also within my means. 
 
-***Important:*** I'm looking for a Ph.D. \& M.Phil. position in robotics. Please contact me know if you are interested in my background and experience so long as you have a available position!
+***Important:*** I'm looking for a Ph.D. or M.Phil. position in robotics. Please contact me if you are interested in my background and experience so long as you have an available position!
 
 
 ### details about my interets
