@@ -6,7 +6,6 @@ excerpt: 'An invariant Kalman filter design that models error distribution on th
 date: 2024-02-01
 venue: 'IEEE Transactions on Robotics (TRO, under review)'
 paperurl: 'https://arxiv.org/pdf/2402.05003.pdf'
-citation: 'Li Q., Zeng Q., et al. (2024). &quot;Efficient Invariant Kalman Filter for Inertial-based Odometry with Large-sample Environmental Measurements.&quot; <i>IEEE TRO (under review)</i>.'
 ---
 
 An invariant Kalman filter design that models error distribution on the SE₂(3) manifold rather than traditional SO(3)×ℝ³ or SE(3), making the dynamics in error states become linear autonomous systems. This improves observer consistency and eliminates linearization errors.

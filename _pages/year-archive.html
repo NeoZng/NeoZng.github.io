@@ -1,46 +1,19 @@
 ---
 layout: archive
 permalink: /year-archive/
-title: "知乎文章"
+title: "Blog posts"
 author_profile: true
 redirect_from:
   - /wordpress/blog-posts/
-  - /blogs/
 ---
 
 {% include base_path %}
-
-## SLAM相关技术文章
-
-### SLAM速递：GLIM GPU加速的局部平滑LVI且全局一致SLAM系统
-工程性非常强的一篇论文，使用VG-ICP进行点云匹配，结合滑窗平滑和基于关键帧的点云匹配，可以处理几秒钟的完全退化的lidar数据。支持多相机视觉特征约束的紧密耦合，全局轨迹优化模块最小化子地图之间的配准误差。
-
-[阅读全文](https://zhuanlan.zhihu.com/p/1912482428099986676)
-
----
-
-## 控制理论系列文章
-
-### 状态空间方程——系统模态和极点
-深入讲解线性时不变系统的模态分析，通过特征值分解理解系统的动态特性。文章从离散系统和连续系统两个角度，阐述了系统矩阵特征值与系统行为的关系，以及极点与模态的本质联系。
-
-[阅读全文](https://zhuanlan.zhihu.com/p/663461419)
-
-### Kalman秩判据的本质：LTIS的能控性
-从本质和直觉的角度分析Kalman秩判据，详细证明了离散和连续情形下的能控性和能达性。通过数学推导展示了能控性矩阵的物理意义，以及为什么系统的能控性可以通过秩判据来判定。
-
-[阅读全文](https://zhuanlan.zhihu.com/p/664027334)
-
-### PBH判据的本质（一）离散线性系统的能控性
-深入分析PBH（Popov-Belevitch-Hautus）判据的本质含义，从几何和代数的角度理解为什么控制矩阵B的列必须张成系统矩阵A每个特征值对应的零空间。文章还讨论了控制能力的度量和系统模态的可控程度。
-
-[阅读全文](https://zhuanlan.zhihu.com/p/662825116)
-
-### SLAM中使用李群和李代数的直觉
-提供对SLAM中李群和李代数应用的直观理解，解释了为什么在处理旋转和位姿时需要使用这些数学工具。文章重点讨论了李群的光滑流形性质，以及李代数如何帮助我们在线性空间中处理旋转的不确定性和优化问题。
-
-[阅读全文](https://zhuanlan.zhihu.com/p/657261293)
-
----
-
-*更多文章持续更新中...*
+{% capture written_year %}'None'{% endcapture %}
+{% for post in site.posts %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if year != written_year %}
+    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+    {% capture written_year %}{{ year }}{% endcapture %}
+  {% endif %}
+  {% include archive-single.html %}
+{% endfor %}

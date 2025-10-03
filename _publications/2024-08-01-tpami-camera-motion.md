@@ -6,7 +6,6 @@ excerpt: 'A novel approach for camera motion estimation that achieves asymptotic
 date: 2024-08-01
 venue: 'IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)'
 paperurl: 'https://ieeexplore.ieee.org/document/11132316'
-citation: 'Zeng Q., et al. (2024). &quot;Consistent and Optimal Solution to Camera Motion Estimation.&quot; <i>IEEE TPAMI</i>.'
 ---
 
 A novel approach for camera motion estimation that achieves asymptotic Gaussianity in noise distribution through special error construction for essential matrix estimation. The method enables bias elimination through variance estimation and achieves maximum likelihood optimal estimation via single-step Gauss-Newton iteration, reaching the Cramér-Rao lower bound.
