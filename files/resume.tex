@@ -1,0 +1,104 @@
+\documentclass{resume}
+\usepackage{amssymb}
+\usepackage{zh_CN-Adobefonts_external} 
+\usepackage{linespacing_fix}
+\usepackage{xcolor}
+\usepackage{cite}
+\usepackage{hyperref}
+\begin{document}
+\pagenumbering{gobble}
+
+
+\name{曾庆铖}
+
+\contactInfo{(+86) 19375151653}{neozng@foxmail.com}
+%**********************************其他信息****************************************
+%在大括号内填写其他信息,最多填写4个,但是如果选择不填信息,
+%那么大括号必须空着不写,而不能删除大括号。
+%\otherInfo后面的四个大括号里的所有信息都会在一行输出
+%如果想要写两行,那就用两次这个指令(\otherInfo{}{}{}{})即可
+\otherInfo{Github：\textcolor{blue}{\href{https://github.com/NeoZng}{NeoZng}}}{Gitee：\textcolor{blue}{\href{https://gitee.com/neozng1}{NeoZng}}}{知乎：\textcolor{blue}{\href{https://www.zhihu.com/people/zengen-38}{Neob0dy}}}{}
+%*********************************照片**********************************************
+%照片需要放到images文件夹下,名字必须是you.jpg,如果不需要照片可以不添加此行命令
+%0.15的意思是,照片的宽度是页面宽度的0.15倍,调整大小,避免遮挡文字
+% \yourphoto{0.13}
+
+
+\section{教育背景}
+
+\datedsubsection{\textbf{湖南大学}\quad\textbf{电气与信息工程学院}\quad\textbf{自动化}          \quad GPA: 3.33/4.0\quad 83.7 (rank 52/139) }{2019.9-2023.6}
+\datedsubsection{\textbf{湖南大学}\quad\textbf{机器人学院}\quad\textbf{机器人工程}(辅修)        \quad  GPA: 3.98/4.0\quad 89.67 (rank 2/26)}{2020.9-2023.6}
+\datedsubsection{\textbf{香港科技大学（广州）\quad\textbf{系统枢纽}\quad\textbf{机器人与自主系统}}\quad GPA: 3.85/4.3 }{2023.9至今}
+
+\section{项目经历}
+
+
+\datedsubsection{\textbf{文远知行WeRide\quad 多传感器标定算法} \quad \textbf{研究实习生}}{2024.12-2025.6}
+\begin{itemize}
+    \item 无需标定参照物和机械参数初值的多个不同模态的传感器标定算法设计与优化。
+    \item 激光雷达和相机之间外参的验证、运营健康检查以及在线标定。
+\end{itemize}
+
+\datedsubsection{\textbf{湖南大学RoboMaster机甲大师\quad 队长}}{2022.03-2023.02}
+\begin{itemize}[parsep=0.5ex]
+  \item 机动目标状态估计算法：由形态学操作获取目标机器人特征，将特征输入svm以进行验证，随后提取其上已知相对位置的点据PnP得出其相对相机的位姿。目标机器人被建模为匀速转动和平动叠加的刚体，加速度服从零均值高斯分布（singer模型），特征相对相机的位姿作为观测，使用粒子滤波估计目标状态。完成22/23队伍程序的整体框架及mcu通信/相机ROS2驱动；将轻量CNN目标检测器NanoDet改为关键点检测，添加无监督教师-学生蒸馏，并进行重参数化+量化剪枝+OpenVINO部署。
+  \item 编写了广受欢迎的CV教程：\textcolor{blue}{{\href{https://github.com/NeoZng/vision_tutorial}{了解CV与RoboMaster算法}}}，编程入门知识库：\textcolor{blue}{\href{https://lapis-router-502.notion.site/6c2937aad3974144965860d1809dcaa9}{软件开发入门}}。
+  \item 设计机器人嵌入式框架\textcolor{blue}{\href{https://gitee.com/hnuyuelurm/basic_framework}{basic\_framework}}（600+star）和配套调试教程/工作流，用arm-GNU工具链，Ozone和VSCode构成现代化开发范式替代老旧的Keil。另使用C++设计了\textcolor{blue}{\href{https://gitee.com/hnuyuelurm/powerful_framework}{powerful\_framework}}。框架可部署于所有ST系列MCU，仅需在CubeMX重新设置pin-map即可。\textbf{代码获得RoboMaster2023开源奖第二名}。
+\end{itemize}
+
+\datedsubsection{\textbf{并联多自由度轮腿式机器人的优化和强化学习控制方法\quad 本科毕业设计}}{2022.11-2023.05}
+\begin{itemize}[parsep=0.5ex]
+    \item 为五连杆并联机构建立简化二阶倒立摆模型，通过牛顿-欧拉法获取动力学方程，设计MPC控制器在matlab simscape multibody仿真中验证算法可行性。仿真：\textcolor{blue}{{\href{https://gitee.com/neozng1/finish-designing}{graduate\_design}}}。sim2real时通过CasADi使用SQP求解，添加额外的model-based立体控制器将机器人运动扩展到三维空间，实现地形自适应、动态悬挂与重心自适应等功能；通过动力学方程以及机载IMU和关节电机编码器设计多传感器融合状态观测器，判断机器人与地面的接触状态和水平运动速度，抑制扰动和模型失配的影响。部署：\textcolor{blue}{{\href{https://gitee.com/hnuyuelurm/balance_chassis}{balance\_chassis}}}。
+    \item 使用IsaacGym搭建多地形环境，设计针对性的奖励进行课程学习，使用非对称actor-critic训练，能够实现斜坡、楼梯、碎石路面的稳定行走。使用模型参数及观测的域随机化提高鲁棒性，并学习扰动观测器显式建模外界扰动，与自体感知一起输入policy从而实现强大的抗扰能力。使用stm-cubeAI通过onnx部署。
+\end{itemize}
+
+\datedsubsection{\textbf{多传感器硬件时间戳同步系统}}{2023.09-2023.10}
+\begin{itemize}[parsep=0.5ex]
+  \item 设计LiDAR-Camera-Inertia-GNSS硬件时间同步方案，将GPS输出的PPS分为两路，其中一路与GPRMC报文一起输入雷达作为同步脉冲；另一路PPS输入STM32外部捕获进行倍频，输出PWM用于触发相机采集。在运算平台中设置相机采集完成、曝光事件回调函数，根据当前帧相机曝光长度及该帧与GPRMC报文的时间差设置相机时间戳，并增加了相机帧错误和PPS错误的处理。根据示波器测试的结果，时间同步精度可达超越PTP的微秒级。代码见\textcolor{blue}{\href{https://github.com/LIAS-CUHKSZ/liv_syn}{liv\_syn}}。
+\end{itemize}
+
+\section{学术经历}
+
+\datedsubsection{\textbf{具有一致收敛性质的高效且无偏的2d-2d对极几何位姿估计算法}\quad IEEE TPAMI \quad \textbf{共同一作}}{}
+通过特殊的误差构造使得本质矩阵估计问题的噪声分布在大量采样时具有渐进高斯性，并可以估计出其方差以消除偏差，之后仅需单步高斯-牛顿迭代，就能得到最大似然意义下最优的估计——使得方差达到克拉梅洛下界。我主要负责设计用于生成仿真数据和评估对极几何的测试框架，使用C++复现了数种SOTA相对位姿估计算法并适配对比的learning-based方法。paper：\textcolor{blue}{\href{https://ieeexplore.ieee.org/document/11132316}{Consistent and Optimal Solution to Camera Motion Estimation}}，code:\textcolor{blue}{\href{https://github.com/LIAS-CUHKSZ/Epipolar_evaluation}{Epipolar\_evaluation}}。
+
+\datedsubsection{\textbf{使用左不变IKF的渐进一致多传感器融合SLAM系统}\quad IEEE TRO(under review) \quad \textbf{第三作者}}{}
+根据系统状态的流形特性，不变卡尔曼滤波的设计将误差分布建模在$SE_2(3)$流形上而非传统的$SO(3)\times \mathbb{R}^3$或$SE(3)$，使得误差状态中的动力学变为线性自治系统，从而改善观测器的一致性并消除线性化误差。激光雷达和相机能构建的观测方程数量通常很大，故设计了在大样本观测情况下一致收敛的估计器，为迭代卡尔曼滤波提供初值。得益于激光点云和相机在对方退化情况下的互补性，加上IMU对机体运动的先验和对点云畸变的去除，我们的框架对于长走廊、白墙等传感器退化的情形表现出卓越的鲁棒性。对比试验显示相对其他的LIV融合SLAM，我们的滤波方法达到了超越滑窗优化方法的SOTA性能并能保证实时低负载运行。我负责代码实现和数据集/实机验证。paper：\textcolor{blue}{\href{https://arxiv.org/pdf/2402.05003.pdf}{Efficient Invariant Kalman Filter for Inertial-based Odometry with Large-sample Environmental Measurements}}，code：\textcolor{blue}{\href{https://github.com/LIAS-CUHKSZ/EIKF-VIO-LIO}{EIKF-VIO-LIO}}。
+
+\datedsubsection{\textbf{使用物体级位姿观测的分布式左不变KF实现多机SLAM}\quad IEEE ICRA-2025 \quad \textbf{共同一作}}{}
+提出了一种\textbf{}，使用来自Pose-CNN输出的语义对象级别6-DoF估计以及机器人之间的相对位姿测量作为滤波器的观测，并通过协方差交集（covariance intersection）以解决机器人间位姿估计未知相关性导致的不确定性估计过度自信/保守的问题，同时在部分机器人出现观测退化时保证整个分布式系统的鲁棒性。我们还证明了整个系统的稳定性：对于系统中的每一个机器人，其估计误差期望的平方是有界的。我负责将invariant state dynamics推广到分布式卡尔曼滤波上，以及实验验证和仿真环境的搭建。\textcolor{blue}{\href{https://ieeexplore.ieee.org/document/11128538}{Distributed Invariant Kalman Filter for Object-level Multi-robot Pose SLAM}}，code：\textcolor{blue}{\href{https://github.com/LIAS-CUHKSZ/Distributed-object-based-SLAM}{Distributed-object-based-SLAM}}。
+
+\datedsubsection{\textbf{在轻量化地图上通过语义线特征进行鲁棒视觉重定位} \quad IEEE/RSJ IROS-2025 \quad \textbf{第二作者}}{}
+为了解决视觉重定位中存在大量外点、地图表示占用过大空间的问题，提出一种仅使用语义标签的线表示，通过Perspective-N-Lines进行鲁棒视觉重定位的框架。使用带饱和函数的加速分支限界算法进行二阶段的旋转和平移求解以实现在99\%外点匹配下的鲁棒估计。我负责饱和函数的设计与理论保证推导，以及代码的C++并行加速实现。文章已被IROS2025接收：\textcolor{blue}{\href{https://arxiv.org/pdf/2503.03254}{SCORE: Saturated Consensus Relocalization in Semantic Line Maps}}，code：\textcolor{blue}{\href{https://github.com/LIAS-CUHKSZ/SCORE}{SCORE}}
+
+\section{专业技能}
+\begin{itemize}[parsep=0.5ex]
+ \item 外语能力：IELTS(7)\quad CET-6(587)，流畅地与母语者进行日常、学术对话和报告
+ \item 掌握敏捷开发流程，熟悉phabricator/jira/diff等工具，有单元测试和CI/CD经验
+ \item 熟练使用C/C++/Python/shell编程，并使用性能分析工具，调试coredump文件
+ \item 熟悉交叉编译环境和Linux下的开发，有MSYS2/MinGW等的开发经历，熟练使用WSL/Docker
+ \item 掌握OpenCV/OpenGV等开源视觉库的开发使用，熟悉ROS/ROS2通信中间件框架
+ \item 系统地学习过计算机体系结构，熟练使用STM32等进行裸机\&实时系统编程,熟读STM-HAL源码
+ \item 熟练使用MuJoCo(Playground)和IsaacLab进行强化学习环境搭建、训练和部署
+\end{itemize}
+
+\section{研究兴趣}
+
+\begin{itemize}
+    \item \textbf{控制工程}：包括时域频域的线性系统分析、系统辨识、非线性系统分析等。我有广泛的控制器/观测器设计经验，包括超前-滞后补偿器、前馈PID、LQR/MPC、KF、扰动观测器、史密斯预估器等。
+    \item  \textbf{运动规划}：了解常见的路径规划（全局）和轨迹规划（局部）算法，包括Hyrid A*/Kino-RRT*/x-PRM/MPC等，对于凸优化/非线性优化有较好的基础，熟悉CasADi等优化库的使用。熟悉传统的\textbf{轨迹优化}求解，及使用\textbf{强化学习}进行足、轮式机器人locomotion算法训练，包括教师学生蒸馏、表示学习和模仿学习。
+    \item \textbf{计算机视觉}：包括基于深度学习的2d/3d的目标检测/分割/立体匹配，传统的图像处理，多视图几何，SfM等。我有设计并部署深度神经网络模型的经验，熟悉PyTorch编程、数据预处理等。我对位姿估计问题（ICP/PnP/Epipolar）和鲁棒优化（CM/SAC/M-估计）非常熟悉。我一直紧跟视觉/多模态大模型的前沿知识。
+    \item \textbf{同步定位与建图}：我的研究集中在多传感器融合上，从控制理论和概率的角度理解状态估计问题。我熟练掌握Ceres/GTSAM求解器的使用，对Visual-SLAM/Lidar-SLAM前端数据匹配/关联、滑窗优化、重定位和回环检测与优化都非常熟悉。此外，我有一定的微分流形+李群基础。
+    \item \textbf{机器人系统}：我是一名机器人全栈工程师，熟悉感知-决策-规划-控制的完整技术栈。对机器人硬件，包括机构、执行器（主要是电机）、控制总线和PCB设计都有一定的了解。
+\end{itemize}
+
+\section{荣誉奖励}
+\begin{itemize}[parsep=0.5ex]
+  \item 本科连续三年获三等奖学金和单项奖学金，博士获香港科技大学（广州）PGS奖学金
+  \item RoboMaster超级对抗赛南部分区赛，二等奖； 高校联盟赛，二等奖
+  \item “挑战杯”中国大学生创业计划大赛\quad 金奖（湖南省） 铜奖（全国）
+  \item 华为Ascend AI创新大赛-图像生成赛道 金奖（湖南省）
+  \item 中国机器人大赛人工智能创意邀请赛\quad 四足机器人组\quad 一等奖
+\end{itemize}
+
+\end{document}

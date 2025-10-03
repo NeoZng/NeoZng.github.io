@@ -1,14 +1,11 @@
 ---
 layout: archive
+title: "我的知乎文章"
 permalink: /year-archive/
-title: "知乎文章"
 author_profile: true
 redirect_from:
   - /wordpress/blog-posts/
-  - /blogs/
 ---
-
-{% include base_path %}
 
 ## SLAM相关技术文章
 
