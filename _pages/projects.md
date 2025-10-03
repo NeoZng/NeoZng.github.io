@@ -1,103 +1,75 @@
 ---
 layout: archive
-title: "项目经历"
+title: "Projects"
 permalink: /projects/
 author_profile: true
 ---
 
 {% include base_path %}
 
-## 工业项目
+## Industrial Projects
 
-### 文远知行WeRide - 多传感器标定算法
-**研究实习生** | *2024.12-2025.6*
+### WeRide - Multi-sensor Calibration Algorithm
+**Research Intern** | *2024.12-2025.6*
 
-* 无需标定参照物和机械参数初值的多个不同模态的传感器标定算法设计与优化
-* 激光雷达和相机之间外参的验证、运营健康检查以及在线标定
-* 技术栈：多传感器融合、在线标定、鲁棒估计
-
----
-
-## 学术研究项目
-
-### 并联多自由度轮腿式机器人的优化和强化学习控制方法
-**本科毕业设计** | *2022.11-2023.05*
-
-为五连杆并联机构建立简化二阶倒立摆模型，通过牛顿-欧拉法获取动力学方程，设计MPC控制器在matlab simscape multibody仿真中验证算法可行性。
-
-**主要贡献：**
-* **模型预测控制**：通过CasADi使用SQP求解，添加额外的model-based立体控制器将机器人运动扩展到三维空间，实现地形自适应、动态悬挂与重心自适应等功能
-* **状态估计**：通过动力学方程以及机载IMU和关节电机编码器设计多传感器融合状态观测器，判断机器人与地面的接触状态和水平运动速度，抑制扰动和模型失配的影响
-* **强化学习**：使用IsaacGym搭建多地形环境，设计针对性的奖励进行课程学习，使用非对称actor-critic训练，能够实现斜坡、楼梯、碎石路面的稳定行走
-
-[仿真代码](https://gitee.com/neozng1/finish-designing) | [部署代码](https://gitee.com/hnuyuelurm/balance_chassis)
-
-### 多传感器硬件时间戳同步系统
-**独立项目** | *2023.09-2023.10*
-
-设计LiDAR-Camera-Inertia-GNSS硬件时间同步方案，将GPS输出的PPS分为两路，其中一路与GPRMC报文一起输入雷达作为同步脉冲；另一路PPS输入STM32外部捕获进行倍频，输出PWM用于触发相机采集。
-
-**技术亮点：**
-* 在运算平台中设置相机采集完成、曝光事件回调函数，根据当前帧相机曝光长度及该帧与GPRMC报文的时间差设置相机时间戳
-* 增加了相机帧错误和PPS错误的处理
-* 根据示波器测试的结果，时间同步精度可达超越PTP的微秒级
-
-[项目代码](https://github.com/LIAS-CUHKSZ/liv_syn)
+* Multi-modal sensor calibration algorithm design and optimization without calibration objects and initial mechanical parameter requirements
+* LiDAR-Camera extrinsic parameter validation, operational health monitoring, and online calibration
+* **Tech Stack:** Multi-sensor fusion, online calibration, robust estimation
 
 ---
 
-## 开源项目
+## Academic Research Projects
 
-### 湖南大学RoboMaster机甲大师 - 队长
-**团队领导** | *2022.03-2023.02*
+### Optimal and Reinforcement Learning Control for Parallel Multi-DOF Wheel-Legged Robot
+**Undergraduate Thesis Project** | *2022.11-2023.05*
 
-作为队长，负责整个团队的技术方向制定和项目管理，同时深度参与算法开发和系统架构设计。
+Established a simplified second-order inverted pendulum model for a five-link parallel mechanism, derived dynamic equations using Newton-Euler method, and designed an MPC controller with validation in MATLAB Simscape Multibody simulation.
 
-**机动目标状态估计算法：**
-* 由形态学操作获取目标机器人特征，将特征输入SVM进行验证，随后提取其上已知相对位置的点据PnP得出其相对相机的位姿
-* 目标机器人被建模为匀速转动和平动叠加的刚体，加速度服从零均值高斯分布（Singer模型），特征相对相机的位姿作为观测，使用粒子滤波估计目标状态
+**Key Contributions:**
+* **Model Predictive Control**: Implemented SQP solver through CasADi, added model-based spatial controllers to extend robot motion to 3D space, achieving terrain adaptation, dynamic suspension, and center-of-gravity adjustment
+* **State Estimation**: Designed multi-sensor fusion state observer using dynamic equations, onboard IMU, and joint motor encoders to determine robot-ground contact state and horizontal velocity, suppressing disturbances and model mismatch effects
+* **Reinforcement Learning**: Built multi-terrain environments using IsaacGym, designed targeted rewards for curriculum learning, employed asymmetric actor-critic training to achieve stable locomotion on slopes, stairs, and gravel surfaces
 
-**深度学习优化：**
-* 将轻量CNN目标检测器NanoDet改为关键点检测，添加无监督教师-学生蒸馏，并进行重参数化+量化剪枝+OpenVINO部署
-* 完成22/23队伍程序的整体框架及MCU通信/相机ROS2驱动
+[Simulation Code](https://gitee.com/neozng1/finish-designing) | [Deployment Code](https://gitee.com/hnuyuelurm/balance_chassis)
 
-**教育资源贡献：**
-* 编写了广受欢迎的CV教程：[了解CV与RoboMaster算法](https://github.com/NeoZng/vision_tutorial)
-* 编程入门知识库：[软件开发入门](https://lapis-router-502.notion.site/6c2937aad3974144965860d1809dcaa9)
+### Multi-sensor Hardware Timestamp Synchronization System
+**Independent Project** | *2023.09-2023.10*
 
-**嵌入式框架开发：**
-* 设计机器人嵌入式框架 [basic_framework](https://gitee.com/hnuyuelurm/basic_framework)（600+star）和配套调试教程/工作流
-* 用arm-GNU工具链，Ozone和VSCode构成现代化开发范式替代老旧的Keil
-* 使用C++设计了 [powerful_framework](https://gitee.com/hnuyuelurm/powerful_framework)
-* 框架可部署于所有ST系列MCU，仅需在CubeMX重新设置pin-map即可
-* **获得RoboMaster2023开源奖第二名**
+Designed LiDAR-Camera-Inertial-GNSS hardware time synchronization scheme. GPS PPS output is split into two channels: one combined with GPRMC messages inputs to LiDAR as synchronization pulse; the other inputs to STM32 external capture for frequency multiplication, outputting PWM to trigger camera acquisition.
 
-**技术栈：** 计算机视觉、状态估计、深度学习、嵌入式开发、ROS2、C++
+**Technical Highlights:**
+* Implemented camera acquisition completion and exposure event callback functions on computing platform, setting camera timestamps based on current frame exposure duration and time difference with GPRMC messages
+* Added error handling for camera frame errors and PPS errors
+* Achieved microsecond-level time synchronization precision exceeding PTP according to oscilloscope test results
+
+[Project Code](https://github.com/LIAS-CUHKSZ/liv_syn)
 
 ---
 
-## 技术专长
+## Open Source Projects
 
-### 控制工程
-* 时域频域的线性系统分析、系统辨识、非线性系统分析
-* 控制器/观测器设计：超前-滞后补偿器、前馈PID、LQR/MPC、KF、扰动观测器、史密斯预估器
+### Hunan University RoboMaster Team - Captain
+**Team Leader** | *2022.03-2023.02*
 
-### 运动规划
-* 路径规划（全局）和轨迹规划（局部）算法：Hybrid A*/Kino-RRT*/x-PRM/MPC
-* 凸优化/非线性优化，熟悉CasADi等优化库的使用
-* 传统轨迹优化求解，及使用强化学习进行足、轮式机器人locomotion算法训练
+As team captain, responsible for technical direction formulation and project management, while deeply involved in algorithm development and system architecture design.
 
-### 计算机视觉
-* 基于深度学习的2d/3d的目标检测/分割/立体匹配，传统的图像处理，多视图几何，SfM
-* 设计并部署深度神经网络模型，熟悉PyTorch编程、数据预处理
-* 位姿估计问题（ICP/PnP/Epipolar）和鲁棒优化（CM/SAC/M-估计）
+**Mobile Target State Estimation Algorithm:**
+* Extracted target robot features through morphological operations, validated features using SVM, then extracted known relative position points for PnP to determine pose relative to camera
+* Modeled target robot as rigid body with superposed uniform rotation and translation, acceleration following zero-mean Gaussian distribution (Singer model), using feature poses relative to camera as observations with particle filter for state estimation
 
-### 同步定位与建图
-* 多传感器融合，从控制理论和概率的角度理解状态估计问题
-* 熟练掌握Ceres/GTSAM求解器的使用
-* Visual-SLAM/Lidar-SLAM前端数据匹配/关联、滑窗优化、重定位和回环检测与优化
-* 微分流形+李群基础
+**Deep Learning Optimization:**
+* Modified lightweight CNN detector NanoDet for keypoint detection, added unsupervised teacher-student distillation, performed reparameterization + quantization pruning + OpenVINO deployment
+* Completed overall framework for 22/23 team programs including MCU communication and camera ROS2 drivers
 
-### 机器人系统
-* 机器人全栈工程师，熟悉感知-决策-规划-控制的完整技术栈
-* 机器人硬件：机构、执行器（主要是电机）、控制总线和PCB设计
+**Educational Resource Contributions:**
+* Authored popular CV tutorial: [Understanding CV and RoboMaster Algorithms](https://github.com/NeoZng/vision_tutorial)
+* Programming introduction knowledge base: [Software Development Primer](https://lapis-router-502.notion.site/6c2937aad3974144965860d1809dcaa9)
+
+**Embedded Framework Development:**
+* Designed robot embedded framework [basic_framework](https://gitee.com/hnuyuelurm/basic_framework) (600+ stars) with supporting debugging tutorials and workflows
+* Established modern development paradigm using ARM-GNU toolchain, Ozone, and VSCode to replace legacy Keil
+* Developed C++-based [powerful_framework](https://gitee.com/hnuyuelurm/powerful_framework)
+* Framework deployable on all ST series MCUs, requiring only CubeMX pin-map reconfiguration
+* **Awarded RoboMaster 2023 Open Source Award Second Prize**
+
+**Tech Stack:** Computer vision, state estimation, deep learning, embedded development, ROS2, C++

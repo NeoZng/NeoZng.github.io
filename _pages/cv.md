@@ -37,13 +37,32 @@ Experience
   * Duties: SLAM algorithm research, multi-sensor fusion
   * Supervisor: Li Qingpeng
 
-Research Interests
+Research Interests & Technical Expertise
 ======
-* **Control Engineering**: Linear system analysis in time and frequency domain, system identification, nonlinear system analysis
-* **Motion Planning**: Path planning and trajectory planning algorithms, convex optimization, reinforcement learning for locomotion
-* **Computer Vision**: Deep learning-based detection/segmentation, traditional image processing, multi-view geometry, SfM
-* **SLAM**: Multi-sensor fusion, state estimation from control theory perspective, visual/LiDAR SLAM
-* **Robotics Systems**: Full-stack robotics engineering from perception to control
+
+### Control Engineering
+* Time-domain and frequency-domain linear system analysis, system identification, nonlinear system analysis
+* Controller/observer design: lead-lag compensators, feedforward PID, LQR/MPC, Kalman filters, disturbance observers, Smith predictors
+
+### Motion Planning
+* Path planning (global) and trajectory planning (local) algorithms: Hybrid A*/Kino-RRT*/x-PRM/MPC
+* Convex optimization/nonlinear optimization, proficient in optimization libraries such as CasADi
+* Traditional trajectory optimization solving and reinforcement learning for legged/wheeled robot locomotion algorithm training
+
+### Computer Vision
+* Deep learning-based 2D/3D object detection/segmentation/stereo matching, traditional image processing, multi-view geometry, SfM
+* Design and deployment of deep neural network models, proficient in PyTorch programming and data preprocessing
+* Pose estimation problems (ICP/PnP/Epipolar) and robust optimization (CM/SAC/M-estimation)
+
+### Simultaneous Localization and Mapping
+* Multi-sensor fusion, understanding state estimation problems from control theory and probabilistic perspectives
+* Proficient in using Ceres/GTSAM solvers
+* Visual-SLAM/LiDAR-SLAM front-end data matching/association, sliding window optimization, relocalization and loop closure detection/optimization
+* Differential manifold and Lie group fundamentals
+
+### Robotics Systems
+* Full-stack robotics engineer, familiar with complete perception-decision-planning-control technology stack
+* Robotics hardware: mechanisms, actuators (primarily motors), control buses and PCB design
 
 Skills
 ======

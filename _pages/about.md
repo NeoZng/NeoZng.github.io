@@ -8,28 +8,24 @@ redirect_from:
   - /about.html
 ---
 
-I come from Longyan, Fujian. I am currently an undergraduate at Hunan University and I major in ***Automaion***, minor in ***Robotics***. 
+I am from Longyan, Fujian. I am currently pursuing my Ph.D. degree in Robotics at the Hong Kong University of Science and Technology (Guangzhou), HKUST(GZ) under the supervision of Prof. Renjing XU. I obtained my B.Eng. degree in Automation \& Robotics from the Hunan University (HNU) in 2023.
 
-Now I am the captain of our university's RoboMaster Robotics competition team. I am a self-proclaimed half-stack engineer in robotics. I am interested in computer vision, machine learning, control theory and computer science. I am a skilled user of asm/C/C++/Python/Shell, embedded development is also within my means. 
+I am a self-proclaimed half-stack engineer in robotics. I am interested in computer vision, machine learning, control theory and reinforcement learning. I used to be a RoboMaster.
 
-***Important:*** I'm looking for a Ph.D. or M.Phil. position in robotics. Please contact me if you are interested in my background and experience so long as you have an available position!
+***Important:*** We are hiring prospective Ph.D. students for 26 Fall. If you are interested in reinforcement learning, HSI/HCI, manipulation, locomotion or robotics in general, feel free to contact me!
 
 
 ### details about my interets
 1. AI
-   - computer vision: object detection, multi-modalities, key-point detection, feature matching
-   - network prunning: 
-quantification, knowledge distillation
-   - deployment, edge inference
-   - Interpretability of DNN
+   - computer vision: object detection/segmentation/classification, multi-modalities, key-point detection, feature matching, stereo matching, SLAM, 3D reconstruction, BEV perception.
 2. Control
-   - linear system:
-   F-PID and its modification, model-based control, design of observer, state estimation
-   - optimization control: LQR, MPC
+   - Optimal control from the perspective of analytical mechanics, neural operator, model predictive control. Motion planning: path planning, trajectory planning.
+   - Reinforcement learning: model-free/model-based RL, offline RL, imitation learning
    - data-driven control: the implementaion of RL in control, system identification
-3. Assorted
-   - SLAM, non-linear optimization, point cloud registration
-   - planning, trajectory generation, decision making
+3. Multi-view geometry
+   - epipolar geometry, PnP, bundle adjustment, pose graph optimization
+   - SLAM, 3D reconstruction, point cloud registration
+   - Robust estimation: RANSAC, M-estimation, Graduated Non-convexity, BnB.
 
 ---
 
